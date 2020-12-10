@@ -16,12 +16,7 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-  const item = {
-    name: name,
-    price: price,
-    category: category
-  };
-  return item
+  return {name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
