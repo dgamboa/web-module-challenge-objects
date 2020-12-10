@@ -110,7 +110,11 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+for (let i = 0; i < reviews.length; i++) {
+  if (reviews[i].name === "Reyna") {
+    reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+  }
+}
 console.log(reviews);
 
 
