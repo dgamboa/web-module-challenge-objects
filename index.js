@@ -15,8 +15,13 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+  const item = {
+    name: name,
+    price: price,
+    category: category
+  };
+  return item
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -79,6 +84,8 @@ Using the reviews array above:
 
 
 
+
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
@@ -108,8 +115,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviewsArray, index) {
+  let review = reviewsArray[index];
+  return `${review.name} gave the restaurant a ${review.rating} star review, and their feedback was: ${review.feedback}`
 }
 
 
@@ -127,8 +135,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(reviewsArray) {
+  let lastReview = reviewsArray[reviewsArray.length - 1];
+  return `${lastReview.name} gave the restaurant a ${lastReview.rating} star review, and their feedback was: ${lastReview.feedback}`
 } 
 
 
