@@ -33,7 +33,7 @@ Test your createMenuItems function by doing the following:
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
-burger object below that automatically calculates price depending on the a string received as a parameter. 
+burger object below that automatically calculates price depending on the string received as a parameter. 
 
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
@@ -48,9 +48,15 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(personCategory) {
+    let personLower = personCategory.toLowerCase();
+    if (personCategory === 'teacher' || personCategory === 'student') {
+      return this.price * 0.75;
+    } else {
+      return this.price * 0.90;
+    }
+  }
 }
-
 
 
 ///////////////Reviews (MVP)///////////////////
